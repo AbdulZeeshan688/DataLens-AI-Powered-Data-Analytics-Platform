@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from core.database import Base, engine
+from models.user import User  # Import models before create_all
+from models.dataset import Dataset
 from api.routes import upload, datasets
 
 # Create database tables
